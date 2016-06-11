@@ -1,0 +1,72 @@
+﻿@model av1.Models.ProdutoModel
+
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Layout/Template.cshtml";
+}
+
+<fieldset style="width: 70%; margin-left: auto; margin-right: auto;">
+    <!-- Criando o formulário de cadastro de produtos -->
+
+    @using (Html.BeginForm("CadastrarProduto", "Produto", FormMethod.Post, new { @class = "form-horizontal" }))
+
+    {
+            <!-- Form Name -->
+        <legend>Cadastro de Pedido</legend>
+
+        <div class="form-group">
+            @Html.LabelFor(p => p.Nome, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(p => p.Nome, new { @class = "form-control input-md" })
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            @Html.LabelFor(p => p.Estoque, new { @type = "number", @min = "1", @max = "1000", @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(p => p.Estoque, new { @class = "form-control input-md" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(p => p.Preco, new { @class = "col-md-4 control-label" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(p => p.Preco, new { @class = "form-control input-md" })
+            </div>
+        </div>
+
+            <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cadastrar"></label>
+            <div class="col-md-8">
+                <input type="submit" name="cadastrar" class="btn btn-success" value="cadastrar">
+                <button id="cancelar" name="cancelar" class="btn btn-danger">limpar</button>
+            </div>
+        </div>
+
+        if (ViewBag.existe == "sim")
+        {
+            <p>
+                <strong> @ViewData["Mensagem"] </strong>
+            </p>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Estoque</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@ViewBag.Nome</td>
+                        <td>@ViewBag.Estoque</td>
+                        <td>@ViewBag.Preco</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    }
+</fieldset>

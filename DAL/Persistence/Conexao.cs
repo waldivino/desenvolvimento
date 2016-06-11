@@ -20,6 +20,9 @@ namespace DAL.Persistence
 
         public DbSet<Cliente> DbSetCliente { get; set; }
         public DbSet<Produto> DbSetProduto { get; set; }
+        public DbSet<Pedido> DbSetPedido { get; set; }
+        public DbSet<ItemPedido> DbSetItemPedido { get; set; }
+
 
     }
 }

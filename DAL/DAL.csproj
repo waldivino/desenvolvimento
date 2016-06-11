@@ -68,9 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\ItemPedido.cs" />
+    <Compile Include="Model\Pedido.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Persistence\ClienteDal.cs" />
     <Compile Include="Persistence\Conexao.cs" />
+    <Compile Include="Persistence\ItemPedidoDal.cs" />
+    <Compile Include="Persistence\PedidoDal.cs" />
     <Compile Include="Persistence\ProdutoDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
