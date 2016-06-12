@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Persistence
 {
-    public class PedidoDal
+    public class PedidoDal : IDisposable
     {
         private Conexao Con; //null
 

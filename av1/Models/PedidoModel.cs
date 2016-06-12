@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace av1.Models
 {
-    class PedidoModel
+    public class PedidoModel
     {
         [Required(ErrorMessage = "Por favor, informe o status do pedido.")]
-        [Display(Name = "Nome do Produto:")]
+        [Display(Name = "Status do pedido:")]
         public string Status { get; set; }
 
         [Required(ErrorMessage = "Por favor, informe a data do pedido.")]
-        [Display(Name = "Nome do Produto:")]
+        [Display(Name = "Data do Pedido:")]
         public DateTime DataPedido { get; set; }
     }
 }

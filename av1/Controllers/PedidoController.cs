@@ -36,13 +36,13 @@ namespace av1.Controllers
                     c.Status = model.Status;
                     c.DataPedido = model.DataPedido;
 
-                    using (PedidoDal d = new PedidoDal())
+                    using (PedidoDal p = new PedidoDal())
                     {
-                        d.Salvar(c); //gravando na base de dados
+                        p.Salvar(c); //gravando na base de dados
                     }
 
                     ViewBag.existe = "sim";
-                    ViewBag.Nome = c.Status;
+                    ViewBag.Status = c.Status;
                     ViewBag.DataPedido = c.DataPedido;
 
                     ViewData["Mensagem"] = "Pedido cadastrado com sucesso!";

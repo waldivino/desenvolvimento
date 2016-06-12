@@ -1,4 +1,4 @@
-﻿@model av1.Models.ProdutoModel
+﻿@model av1.Models.PedidoModel
 
 @{
     ViewBag.Title = "Cadastro";
@@ -8,31 +8,24 @@
 <fieldset style="width: 70%; margin-left: auto; margin-right: auto;">
     <!-- Criando o formulário de cadastro de produtos -->
 
-    @using (Html.BeginForm("CadastrarProduto", "Produto", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm("CadastrarPedido", "Pedido", FormMethod.Post, new { @class = "form-horizontal" }))
 
     {
             <!-- Form Name -->
         <legend>Cadastro de Pedido</legend>
 
         <div class="form-group">
-            @Html.LabelFor(p => p.Nome, new { @class = "col-md-4 control-label" })
+            @Html.LabelFor(p => p.Status, new { @class = "col-md-4 control-label" })
             <div class="col-md-4">
-                @Html.TextBoxFor(p => p.Nome, new { @class = "form-control input-md" })
+                @Html.TextBoxFor(p => p.Status, new { @class = "form-control input-md" })
             </div>
         </div>
 
         <div class="form-group">
 
-            @Html.LabelFor(p => p.Estoque, new { @type = "number", @min = "1", @max = "1000", @class = "col-md-4 control-label" })
+            @Html.LabelFor(p => p.DataPedido, new { @type = "number", @min = "1", @max = "1000", @class = "col-md-4 control-label" })
             <div class="col-md-4">
-                @Html.TextBoxFor(p => p.Estoque, new { @class = "form-control input-md" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(p => p.Preco, new { @class = "col-md-4 control-label" })
-            <div class="col-md-4">
-                @Html.TextBoxFor(p => p.Preco, new { @class = "form-control input-md" })
+                @Html.TextBoxFor(p => p.DataPedido, new { @class = "form-control input-md" })
             </div>
         </div>
 
@@ -54,16 +47,14 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Estoque</th>
-                        <th>Preço</th>
+                        <th>Status</th>
+                        <th>Data do Pedido</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>@ViewBag.Nome</td>
-                        <td>@ViewBag.Estoque</td>
-                        <td>@ViewBag.Preco</td>
+                        <td>@ViewBag.Status</td>
+                        <td>@ViewBag.DataPedido</td>
                     </tr>
                 </tbody>
             </table>
