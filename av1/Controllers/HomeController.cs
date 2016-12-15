@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace av1.Controllers
+namespace padoca.Controllers
 {
     public class HomeController : Controller
     {

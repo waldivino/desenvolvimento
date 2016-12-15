@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace av1.Models
+namespace padoca.Models
 {
     public class ProdutoModel
     {
@@ -20,5 +20,9 @@ namespace av1.Models
         [Required(ErrorMessage = "Por favor, informe o preço do produto.")]
         [Display(Name = "Informe o Preço:")]
         public decimal Preco { get; set; }
+
+        [Required(ErrorMessage = "Por favor, informe a data e hora da fornada.")]
+        [Display(Name = "Data e hora da fornada:")]
+        public DateTime DataHoraFornada { get; set; }
     }
 }

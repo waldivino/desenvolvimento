@@ -18,13 +18,11 @@ namespace DAL.Model
         [Column("Nome")]
         public string Nome { get; set; }
 
-        [Column("Cpf")]
-        public string Cpf { get; set; }
+        [Column("email")]
+        public string email { get; set; }
 
         [Column("Endereco")]
         public string Endereco { get; set; }
 
-        [Column("Telefone")]
-        public string Telefone { get; set; }
     }
 }

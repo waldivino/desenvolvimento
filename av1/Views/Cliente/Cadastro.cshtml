@@ -1,4 +1,4 @@
-﻿@model av1.Models.ClienteModel
+﻿@model padoca.Models.ClienteModel
 
 @{
     ViewBag.Title = "Cadastro";
@@ -23,9 +23,9 @@
 
         <div class="form-group">
 
-            @Html.LabelFor(p => p.Cpf, new { @class = "col-md-4 control-label" })
+            @Html.LabelFor(p => p.Email, new { @class = "col-md-4 control-label" })
             <div class="col-md-4">
-                @Html.TextBoxFor(p => p.Cpf, new { @class = "form-control input-md" })
+                @Html.TextBoxFor(p => p.Email, new { @class = "form-control input-md" })
             </div>
         </div>
 
@@ -36,12 +36,6 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(p => p.Telefone, new { @class = "col-md-4 control-label" })
-            <div class="col-md-4">
-                @Html.TextBoxFor(p => p.Telefone, new { @class = "form-control input-md" })
-            </div>
-        </div>
 
             <!-- Button (Double) -->
         <div class="form-group">
@@ -62,17 +56,15 @@
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>CPF</th>
+                        <th>Email</th>
                         <th>Endereço</th>
-                        <th>Telefone</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>@ViewBag.Nome</td>
-                        <td>@ViewBag.Cpf</td>
+                        <td>@ViewBag.email</td>
                         <td>@ViewBag.Endereco</td>
-                        <td>@ViewBag.Telefone</td>
                     </tr>
                 </tbody>
             </table>

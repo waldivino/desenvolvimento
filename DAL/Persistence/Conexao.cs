@@ -13,15 +13,13 @@ namespace DAL.Persistence
     {
 
         public Conexao()
-            : base(ConfigurationManager.ConnectionStrings["infnet"].ConnectionString)
+            : base(ConfigurationManager.ConnectionStrings["av1"].ConnectionString)
         {
 
         }
 
         public DbSet<Cliente> DbSetCliente { get; set; }
         public DbSet<Produto> DbSetProduto { get; set; }
-        public DbSet<Pedido> DbSetPedido { get; set; }
-        public DbSet<ItemPedido> DbSetItemPedido { get; set; }
 
 
     }

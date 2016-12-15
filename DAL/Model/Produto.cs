@@ -23,5 +23,8 @@ namespace DAL.Model
 
         [Column("Preco")]
         public decimal? Preco { get; set; }
+
+        [Column("DataHoraFormatada")]
+        public DateTime DataHoraFormatada { get; set; }
     }
 }

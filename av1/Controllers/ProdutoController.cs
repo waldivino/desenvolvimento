@@ -1,4 +1,4 @@
-﻿using av1.Models;
+﻿using padoca.Models;
 using DAL.Model;
 using DAL.Persistence;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace av1.Controllers
+namespace padoca.Controllers
 {
     public class ProdutoController : Controller
     {

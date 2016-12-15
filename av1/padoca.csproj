@@ -118,9 +118,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\infnet.mdf" />
-    <Content Include="App_Data\infnet_log.ldf">
-      <DependentUpon>infnet.mdf</DependentUpon>
+    <Content Include="App_Data\av1.mdf" />
+    <Content Include="App_Data\av1_log.ldf">
+      <DependentUpon>av1.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -131,13 +131,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ClienteModel.cs" />
-    <Compile Include="Models\PedidoModel.cs" />
     <Compile Include="Models\ProdutoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -153,7 +151,6 @@
     <Content Include="Views\Produto\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Produto\Index.cshtml" />
-    <Content Include="Views\Pedido\Cadastro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

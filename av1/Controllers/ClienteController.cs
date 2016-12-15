@@ -1,4 +1,4 @@
-﻿using av1.Models;
+﻿using padoca.Models;
 using DAL.Model;
 using DAL.Persistence;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace av1.Controllers
+namespace padoca.Controllers
 {
     public class ClienteController : Controller
     {
@@ -37,9 +37,8 @@ namespace av1.Controllers
                 {
                     Cliente c = new Cliente();
                     c.Nome = model.Nome;
-                    c.Cpf = model.Cpf;
+                    c.email = model.Email;
                     c.Endereco = model.Endereco;
-                    c.Telefone = model.Telefone;
 
                     //Random randNum = new Random();
                     //c.ClienteId = Convert.ToInt32(randNum.Next().ToString());
@@ -51,9 +50,8 @@ namespace av1.Controllers
 
                     ViewBag.existe = "sim";
                     ViewBag.Nome = c.Nome;
-                    ViewBag.Cpf = c.Cpf;
+                    ViewBag.email = c.email;
                     ViewBag.Endereco = c.Endereco;
-                    ViewBag.Telefone = c.Telefone;
 
                     ViewData["Mensagem"] = "Cliente cadastrado com sucesso!";
 
